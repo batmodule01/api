@@ -1,4 +1,4 @@
-package handler
+package main
 
 import (
 	crypto_rand "crypto/rand"
@@ -388,8 +388,6 @@ func tls_request() *http.Client {
 	return c
 }
 
-func handler() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("(´・ω・｀)"))
-	})
+func Handler(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("(´・ω・｀)"))
 }
